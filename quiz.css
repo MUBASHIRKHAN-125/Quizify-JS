@@ -19,9 +19,8 @@ body button {
     justify-content: center;
     align-items: center;
     margin-top: 70px;
-    padding: 80px 0px 130px 0px;
+    padding: 80px 0px 80px 0px;
     column-gap: 110px;
-    position: relative;
 }
 
 .textquiz span {
@@ -30,11 +29,12 @@ body button {
 
 .mainquestionQuiz {
     width: 445px;
-    height: 420px;
-    border: 6px solid rgb(235, 116, 5);
+    min-height: 350px;
+    border: 8px solid rgb(235, 109, 5);
     background-color: #FFFFFF;
     border-radius: 10px;
-    padding: 40px 20px;
+    padding: 34px 20px;
+    box-shadow: -1px 1px 18px black;
 }
 
 .answerbuttonsgroup {
@@ -50,23 +50,11 @@ body button {
     height: 38px;
     border-radius: 6px;
     border: 2px solid rgba(43, 41, 41, 0.4);
-    /* position: relative;
-    z-index: 1;
-    overflow: hidden; */
+    font-weight: bold;
+    color: rgb(255, 81, 0);
+    font-size: 15px;
 }
 
-/* .answerbuttonsgroup button::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: -1;
-    background-color: green;
-    transition: all 0.8s linear;
-    transform: translate(-100% , 0px);
-} */
 .buttonsstyle button:focus {
     background-color: lightgreen;
 }
@@ -79,22 +67,23 @@ body button {
 }
 
 .questioncontainer>p {
-    padding: 18px;
+    padding: 18px 14px;
+    font-weight: bold;
 }
 
-.submitanswer {
-    padding: 20px 0px;
-    text-align: center;
+.submit {
+    padding-top: 14px;
 }
 
-.submitanswer button {
-    width: 43%;
-    height: 40px;
+#submitbtn {
+    width: 100%;
+    height: 38px;
     background-color: #031E4E;
     color: white;
     font-size: 19px;
     border-radius: 6px;
     border: none;
+    outline: none;
 }
 
 .textquiz {
@@ -116,10 +105,83 @@ body button {
 }
 
 .mainscore {
-    position: absolute;
-    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 50px;
 }
 
-.mainscore p {
-    font-size: 30px;
+@media (max-width:768px) {
+    .mainQuizcontainer {
+        column-gap: 110px;
+        flex-direction: column-reverse;
+        row-gap: 40px;
+        margin: 0px;
+        padding-top: 60px;
+    }
+
+    .textquiz {
+        row-gap: 12px;
+    }
+}
+
+@media(max-width:430px) {
+    .mainquestionQuiz {
+        width: 400px;
+        padding: 34px 12px;
+    }
+
+    .mainQuizcontainer {
+        padding-top: 40px;
+
+    }
+
+    .questioncontainer>p {
+        padding: 18px 0px;
+        text-align: center;
+    }
+
+    .mainscore {
+        font-size: 23px;
+        padding: 50px 4px;
+    }
+
+    .mainscore span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:390px) {
+    .mainquestionQuiz {
+        width: 360px;
+    }
+
+    .mainquestionQuiz {
+        width: 360px;
+        padding: 34px 6px;
+    }
+
+    .mainscore {
+        font-size: 20px;
+    }
+
+    .mainscore span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:320px) {
+    .mainquestionQuiz {
+        width: 313px;
+        padding: 34px 3px;
+    }
+    
+    .mainscore {
+        font-size: 18px;
+    }
 }
