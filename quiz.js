@@ -1,5 +1,7 @@
 let startQuiz = confirm("Ready to start the quiz? There are 10 questions.");
+
 if (startQuiz) {
+
     let allQuestions = [
 
         {
@@ -103,7 +105,8 @@ if (startQuiz) {
             createButton.innerText = 'Submit!';
             nextbutton.innerText = createButton.innerText;
 
-        } else if (currIndex === allQuestions.length) {
+        }
+        if (currIndex === allQuestions.length) {
             scoreShow()
         };
     });
