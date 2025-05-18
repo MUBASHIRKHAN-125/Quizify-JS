@@ -66,7 +66,7 @@ if (startQuiz) {
 
     let currIndex = 0;
     let score = 0;
-    pageText.innerText = 1 + ' / 10';
+    pageText.innerText = "Page : " +  1 + ' / 10';
 
     const addquestion = (index) => {
 
@@ -98,7 +98,7 @@ if (startQuiz) {
 
         if (currIndex < allQuestions.length) {
             addquestion(currIndex);
-            pageText.innerText = `${currIndex + 1} / 10`;
+            pageText.innerText = `Page : ${currIndex + 1} / 10`;
         };
         if (currIndex === 9) {
             let createButton = document.createElement('button');
