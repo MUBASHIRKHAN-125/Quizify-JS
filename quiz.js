@@ -1,6 +1,3 @@
-let startQuiz = confirm("Ready to start the quiz? There are 10 questions.");
-
-if (startQuiz) {
 
     let allQuestions = [
 
@@ -64,9 +61,10 @@ if (startQuiz) {
     let percentage = document.getElementById('percentage');
     let pageText = document.getElementById('pagetext');
 
+
     let currIndex = 0;
     let score = 0;
-    pageText.innerText = "Page : " +  1 + ' / 10';
+    pageText.innerText = "Page : " + 1 + ' / 10';
 
     const addquestion = (index) => {
 
@@ -125,9 +123,7 @@ if (startQuiz) {
     //     }, 100);
     // };
 
-} else {
-    alert("No worries! Come back when you're ready.");
-}
+
 
 
 

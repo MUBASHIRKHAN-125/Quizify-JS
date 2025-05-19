@@ -113,13 +113,24 @@ body button {
     color: white;
     font-weight: bold;
     font-size: 30px;
-    padding: 50px;
+    padding: 40px;
 }
-.textshow{
+
+.textshow {
     margin-top: 20px;
     text-align: center;
     font-weight: bold;
 }
+
+#gotohome {
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color: orangered;
+    font-weight: bold;
+}
+
 
 @media (max-width:768px) {
     .mainQuizcontainer {
@@ -180,13 +191,17 @@ body button {
     }
 }
 
-@media (max-width:320px) {
+@media (max-width:330px) {
     .mainquestionQuiz {
         width: 313px;
         padding: 34px 3px;
     }
-    
+
     .mainscore {
         font-size: 18px;
+    }
+
+    .questioncontainer h2 {
+        text-align: center;
     }
 }

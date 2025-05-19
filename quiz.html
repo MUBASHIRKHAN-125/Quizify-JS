@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ APP!</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <div class="mainQuizcontainer">
+        <div class="mainquestionQuiz">
+            <div class="questioncontainer">
+                <h2>Simple Quiz!</h2>
+                <p id="questionprint"></p>
+                <div class="answerbuttonsgroup buttonsstyle">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="submitanswer submit">
+                <button id="submitbtn">Next</button>
+            </div>
+            <div class="textshow">
+                <p id="pagetext"></p>
+            </div>
+        </div>
+        <div class="textquiz">
+            <h1 id="textq">Build</h1>
+            <h1><span>Quiz</span> App</h1>
+            <p>with <span>JavaScript!</span></p>
+        </div>
+    </div>
+    <div class="mainscore">
+        <div class="tatolscore">
+            <p>TOTAL SCORE : <span id="TotalScore"></span></p>
+        </div>
+        <div class="percentage">
+            <p>PERCENTAGE :<span id="percentage"></span></p>
+        </div>
+        <button onclick="document.location = 'index.html' " id="gotohome">GO HOME PAGE!</button>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
