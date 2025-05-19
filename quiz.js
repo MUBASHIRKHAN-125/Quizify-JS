@@ -1,4 +1,5 @@
-
+let startQuiz = confirm("Ready to start the quiz? There are 10 questions.");
+if (startQuiz) {
     let allQuestions = [
 
         {
@@ -77,16 +78,15 @@
     }
 
     answerGroup.forEach(saveanswer => {
+            saveanswer.addEventListener("click", (e) => {
+                let scoreShow = allQuestions[currIndex].correctAnswer;
+                let checkAnswer = e.target.innerText;
+                if (checkAnswer === scoreShow) {
+                    return score += 10;
+                }
+                saveanswer.classList.add('buttonsstyle');;
 
-        saveanswer.addEventListener("click", (e) => {
-            let scoreShow = allQuestions[currIndex].correctAnswer;
-            let checkAnswer = e.target.innerText;
-            if (checkAnswer === scoreShow) {
-                return score += 10;
-            }
-            saveanswer.classList.add('buttonsstyle');;
-
-        });
+            });
     });
 
     addquestion(currIndex);
@@ -114,14 +114,10 @@
         let resultPercentage = ((score / 100) * 100);
         percentage.innerText = ` Your Percentage is ${resultPercentage}%`;
     }
-    // const animationPercentage = () => {
-    //     setTimeout(() => {
-    //         let resultPercentage = ((score / 100) * 100);
-    //         per = resultPercentage;
-    //         scoreShow();
-
-    //     }, 100);
-    // };
+} else {
+    alert("No worries! Come back when you're ready.");
+    window.location.href = 'index.html';
+};
 
 
 
