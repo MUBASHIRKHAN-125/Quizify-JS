@@ -78,15 +78,15 @@ if (startQuiz) {
     }
 
     answerGroup.forEach(saveanswer => {
-            saveanswer.addEventListener("click", (e) => {
-                let scoreShow = allQuestions[currIndex].correctAnswer;
-                let checkAnswer = e.target.innerText;
-                if (checkAnswer === scoreShow) {
-                    return score += 10;
-                }
-                saveanswer.classList.add('buttonsstyle');;
+        saveanswer.addEventListener("click", (e) => {
+            let scoreShow = allQuestions[currIndex].correctAnswer;
+            let checkAnswer = e.target.innerText;
+            if (checkAnswer === scoreShow) {
+                return score += 10;
+            }
+            saveanswer.classList.add('buttonsstyle');;
 
-            });
+        });
     });
 
     addquestion(currIndex);

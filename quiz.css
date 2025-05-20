@@ -124,11 +124,12 @@ body button {
 
 #gotohome {
     padding: 9px 12px;
-    border-radius: 8px;
+    border-radius: 5px;
     border: none;
     outline: none;
     color: orangered;
     font-weight: bold;
+    box-shadow: -1px 1px 12px #cec0dc
 }
 
 
