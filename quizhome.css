@@ -61,20 +61,58 @@ body {
     background: linear-gradient(to right, purple, #2356e4);
     font-size: 15px;
     color: #fff;
-    box-shadow: -1px 1px 15px #181313;
+    position: relative;
+}
+
+#animation {
+    position: absolute;
+    background-color: rgb(97, 35, 197);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    border-radius: 8px;
+    animation: btnanimation 1.5s linear infinite;
+}
+
+@keyframes btnanimation {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: scale(1.2)
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
 }
 
 @media (max-width:430px) {
-    body{
-     background-color: #ABCFFD;
+    body {
+        background-color: #ABCFFD;
     }
-    .maincontainer{
-            height: 450px;
+
+    .maincontainer {
+        height: 450px;
     }
 }
+
 @media (max-width:330px) {
-  .conntainerquiz {
+    .conntainerquiz {
         padding: 25px 20px;
     }
 
+}
+
+@media (max-width:300px) {
+    .conntainerquiz {
+        padding: 25px 12px;
+
+    }
 }
